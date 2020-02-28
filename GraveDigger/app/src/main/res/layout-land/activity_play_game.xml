@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_game">
+
+    <TextView
+        android:id="@+id/id_tv_mine_num"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:padding="15dp"
+        android:text="xxx"
+        app:layout_constraintBottom_toBottomOf="@id/id_tv_back"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/id_tv_back"
+        app:layout_constraintTop_toTopOf="@id/id_tv_back" />
+
+    <TextView
+        android:id="@+id/id_tv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/bg_game_back"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:text="Back"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/id_tv_line_01"
+        app:layout_constraintLeft_toRightOf="@id/id_tv_mine_num"
+        app:layout_constraintRight_toLeftOf="@id/id_tv_scan_step"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/id_tv_scan_step"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center|right"
+        android:padding="15dp"
+        android:text="xxx"
+        app:layout_constraintBottom_toBottomOf="@id/id_tv_back"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@id/id_tv_back"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/id_tv_back" />
+
+    <TextView
+        android:id="@+id/id_tv_line_01"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_margin="5dp"
+        android:background="#C89361"
+        app:layout_constraintBottom_toTopOf="@id/id_rv_cells"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_tv_back" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/id_rv_cells"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_tv_line_01" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
